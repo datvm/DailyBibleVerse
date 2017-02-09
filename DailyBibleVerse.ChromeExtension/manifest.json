@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "short_name": "Daily Verse",
+  "name": "Daily Bible Verse",
+  "version": "1.0",
+
+  "default_locale": "en",
+  "description": "Your new tab is now replaced with a daily Bible verse and background image.",
+
+  "author": "Luke Vo",
+  "background": {
+    "persistent": false
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "homepage_url": "http://dailybibleverse.lukevo.faith",
+  "permissions": [ "dailybibleverse.lukevo.faith" ],
+}
