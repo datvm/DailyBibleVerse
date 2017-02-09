@@ -1,4 +1,82 @@
 ﻿body {
     width: 100vw;
     height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: lighter;
+}
+
+.page-background {
+    background-image: url(/img/background.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+@mixin text-shadow() {
+    text-shadow: 0 0 20px #424242;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    p {
+        margin: 3px 0;
+    }
+
+    .clock-welcome {
+        text-transform: uppercase;
+        font-size: 3vh;
+    }
+
+    .clock {
+        font-size: 10vh;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .date {
+        font-size: 2vh;
+        text-transform: uppercase;
+    }
+
+    .verse {
+        @include text-shadow();
+        font-size: 1.3em;
+    }
+
+    .verse-ref {
+        @include text-shadow();
+        text-align: right;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    @mixin middle() {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transform: translate(0, -50%);
+        color: white;
+        @include text-shadow();
+    }
+
+    .middle-top {
+        @include middle();
+        top: 25vh;
+    }
+
+    .middle-bottom {
+        @include middle();
+        top: 75vh;
+    }
 }
