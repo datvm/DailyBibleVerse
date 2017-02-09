@@ -22,9 +22,9 @@ function showClock() {
 
     if (hour > 6 && hour < 12) {
         message = "Good Morning!";
-    } else if (hour < 18) {
+    } else if (hour >= 12 && hour < 18) {
         message = "Good Afternoon!";
-    } else if (hour < 21) {
+    } else if (hour >= 18 && hour <= 21) {
         message = "Good Evening!";
     }
 

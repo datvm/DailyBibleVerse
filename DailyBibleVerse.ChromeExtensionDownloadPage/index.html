@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Daily Bible Verse Extension - Daily Devotional Bible Verse in your Chrome New Tab</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/extension.min.css" />
+
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/hbcnmbidfinkocndbbchppnnnmlcdocl">
+</head>
+<body>
+    <input id="txt-wallpaper" type="file" accept="image/*" class="hidden" />
+    <div class="page-background"></div>
+
+    <div class="download-chrome">
+        <h3>
+            <img class="img-inline" src="img/icon-64.png" />
+            <strong>Daily Bible Verse</strong>
+            main features:
+        </h3>
+
+        <ul>
+            <li>Daily verse in more than 200 versions;</li>
+            <li>Your own customization wallpaper;</li>
+            <li>Available in your new tab, even without Internet.</li>
+        </ul>
+
+        <p class="text-center">
+            <img class="webstore" src="img/chrome_webstore.png" />
+        </p>
+
+        <div class="text-center clearfix">
+            <button id="btn-install" class="btn btn-primary col-sm-12">Install now</button>
+        </div>
+
+        <p class="text-center">
+            <a href="https://chrome.google.com/webstore/detail/hbcnmbidfinkocndbbchppnnnmlcdocl">
+                <small>or visit in Chrome Webstore</small>
+            </a>
+            
+        </p>
+
+        <hr />
+        <p>
+            <a href="https://github.com/datvm/DailyBibleVerse">
+                Source code is available on GitHub.
+            </a>
+        </p>
+    </div>
+
+    <div class="content">
+        <div class="middle-top">
+            <p class="clock-welcome">Good Morning</p>
+            <p class="clock">00:00</p>
+            <p class="date">Jan 01 2017</p>
+        </div>
+
+        <div class="middle-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8 col-sm-12">
+                        <div class="verse"></div>
+                        <div class="verse-ref">
+                            <a class="verse-address"></a>
+                            <br />
+                            <span class="verse-version"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>
