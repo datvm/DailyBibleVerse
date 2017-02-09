@@ -177,17 +177,19 @@ $(function () {
     });
 
 
-    $("#btn-show-menu").click(function () { $("#diag-menu").removeClass("hidden"); })
-    $("#btn-close-menu").click(function () { $("#diag-menu").addClass("hidden"); });
-    $("#btn-save").click(function () { saveSettings(); $("#diag-menu").addClass("hidden"); })
+    $("#btn-show-menu").click(function () { $("#diag-menu").removeClass("hidden"); event.preventDefault(); })
+    $("#btn-close-menu").click(function () { $("#diag-menu").addClass("hidden"); event.preventDefault(); });
+    $("#btn-save").click(function () { saveSettings(); $("#diag-menu").addClass("hidden"); event.preventDefault(); })
 
     $("#btn-default-background").click(function () {
         settings.Background = null;
         saveSettings();
+        event.preventDefault();
     });
 
     $("#btn-wallpaper").click(function () {
         $("#txt-wallpaper").click();
+        event.preventDefault();
     });
 
     $("#txt-wallpaper").change(function () {
