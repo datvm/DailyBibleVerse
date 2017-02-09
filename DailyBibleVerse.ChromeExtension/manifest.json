@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "short_name": "Daily Verse",
   "name": "Daily Bible Verse",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "description": "Your new tab is now replaced with a daily Bible verse and background image.",
 
