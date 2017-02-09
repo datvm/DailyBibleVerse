@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/extension.min.css" />
 </head>
 <body>
+    <input id="txt-wallpaper" type="file" accept="image/*" class="hidden" />
     <div class="page-background"></div>
 
     <div class="content">
@@ -26,7 +27,7 @@
                     <div class="col-md-offset-2 col-md-8 col-sm-12">
                         <div class="verse"></div>
                         <div class="verse-ref">
-                            <span class="verse-address"></span>
+                            <a class="verse-address"></a>
                             <br />
                             <span class="verse-version"></span>
                         </div>
@@ -34,6 +35,80 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="bottom text-right">
+        <a id="btn-show-menu" href="#"><img src="img/settings.png" /></a>
+    </div>
+
+    <div id="diag-menu" class="diag hidden">
+        <button id="btn-close-menu" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <h3>Settings</h3>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Bible Version</label>
+                <div class="col-sm-5">
+                    <select id="cbo-languages" class="form-control"></select>
+                </div>
+                <div class="col-sm-5">
+                    <select id="cbo-versions" class="form-control"></select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Background</label>
+                <div class="col-sm-10">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button id="btn-default-background" class="btn btn-default col-sm-12">Default Background</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="setting-colors">
+                                <li><a data-setting-color="#FFFFFF"></a></li>
+                                <li><a data-setting-color="#4ABDAC"></a></li>
+                                <li><a data-setting-color="#FD4819"></a></li>
+                                <li><a data-setting-color="#F7B733"></a></li>
+                                <li><a data-setting-color="#4ABDAC"></a></li>
+                                <li><a data-setting-color="#00784A"></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button id="btn-wallpaper" class="btn btn-default col-sm-12">Use your own wallpaper</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group text-right">
+                <button id="btn-save" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Information</h3>
+                <p>
+                    The Verse of the day is from <a href="https://www.biblegateway.com/">Bible Gateway Ministry</a>.
+                    <br />
+                    I do not own any copyright material beside this extension code.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <h3>Contribution</h3>
+                <p>
+                    This extension is a devotional open-source project. The source can be freely used for any purpose (under MIT license) without having to ask my permission.
+                    For more information, please visit the project <a href="https://github.com/datvm/DailyBibleVerse">on GitHub</a>.
+                </p>
+            </div>
+        </div>
+        
     </div>
 
     <script src="/js/jquery-3.1.1.min.js"></script>

@@ -6,6 +6,11 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: lighter;
+    margin: 20px 0;
+}
+
+a, a:hover, a:focus, a:visited {
+    color: cornflowerblue;
 }
 
 .page-background {
@@ -60,6 +65,10 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 20px;
     }
 
+    .verse-address {
+        color: #808080;
+    }
+
     @mixin middle() {
         position: absolute;
         left: 0;
@@ -78,5 +87,76 @@ h1, h2, h3, h4, h5, h6 {
     .middle-bottom {
         @include middle();
         top: 75vh;
+    }
+}
+
+.bottom {
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+
+
+    > a {
+        display: inline-block;
+        transition: all linear .5s;
+
+        > img {
+            height: 2em;
+        }
+
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+
+
+.diag {
+    position: fixed;
+    z-index: 10;
+    right: 5px;
+    bottom: 5px;
+    padding: 15px 30px;
+    background: white;
+    width: 40vw;
+
+    .btn-primary {
+        margin-top: 15px;
+    }
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.btn {
+    border-radius: 0;
+    padding: 10px 40px;
+}
+
+ul.setting-colors {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+
+    > li {
+        display: inline-block;
+        padding: 0;
+        margin: 5px;
+
+        > a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            border: 1px solid black;
+            cursor: pointer;
+            box-shadow: 0 0 1px 0px black inset, 0 0 1px 0px black;
+        }
     }
 }
