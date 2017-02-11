@@ -1,9 +1,5 @@
-﻿if (window.location.hash.indexOf("ncr") == -1 && navigator.language.startsWith("vi")) {
-    window.location.href = "/vi";
-}
-
-//var dailyVerseUrl = "https://www.biblegateway.com/votd/get/?format=json&version=NIV";
-var dailyVerseUrl = "/votd.aspx";
+﻿//var dailyVerseUrl = "https://www.biblegateway.com/votd/get/?format=json&version=NIV";
+var dailyVerseUrl = "/votd_vi.aspx";
 var verseLoaded = false;
 
 var MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",];
