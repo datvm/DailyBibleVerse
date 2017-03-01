@@ -24,7 +24,8 @@ a, a:hover, a:focus, a:visited {
     bottom: 0;
 }
 
-@mixin text-shadow() {
+.text-shadow {
+    color: white;
     text-shadow: 0 0 20px #424242;
 }
 
@@ -54,19 +55,18 @@ a, a:hover, a:focus, a:visited {
     }
 
     .verse {
-        @include text-shadow();
         font-size: 1.3em;
     }
 
     .verse-ref {
-        @include text-shadow();
         text-align: right;
         padding-right: 0;
         margin-top: 20px;
     }
 
     .verse-address {
-        color: #808080;
+        opacity: 0.8;
+        color: inherit;
     }
 
     @mixin middle() {
@@ -75,8 +75,6 @@ a, a:hover, a:focus, a:visited {
         width: 100%;
         text-align: center;
         transform: translate(0, -50%);
-        color: white;
-        @include text-shadow();
     }
 
     .middle-top {
@@ -122,7 +120,9 @@ a, a:hover, a:focus, a:visited {
     bottom: 5px;
     padding: 15px 30px;
     background: white;
-    width: 40vw;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
 
     .btn-primary {
         margin-top: 15px;
@@ -135,7 +135,7 @@ a, a:hover, a:focus, a:visited {
 
 .btn {
     border-radius: 0;
-    padding: 10px 40px;
+    padding: 10px 0;
 }
 
 ul.setting-colors {
@@ -159,4 +159,48 @@ ul.setting-colors {
             box-shadow: 0 0 1px 0px black inset, 0 0 1px 0px black;
         }
     }
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.m-t-10 {
+    margin-top: 10px;
+}
+
+@media only screen and (min-width : 1200px) {
+    .diag {
+        max-width: 60vw;
+    }
+}
+
+@media only screen and (min-width : 1500px) {
+    .diag {
+        max-width: 40vw;
+    }
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: rgba(200,200,200,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(200,200,200,0.4);
 }
