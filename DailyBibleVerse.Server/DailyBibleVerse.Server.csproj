@@ -240,6 +240,7 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="img\background.jpg" />
     <Content Include="img\chrome_webstore.png" />
@@ -285,6 +286,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\ChromeVietnamese.cshtml" />
+    <Content Include="Views\Home\Install.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

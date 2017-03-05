@@ -1,0 +1,52 @@
+﻿@{ 
+    this.Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="http://dailybibleverse.lukevo.faith/img/icon-512.png">
+
+    <title>Daily Bible Verse Extension - Daily Devotional Bible Verse in your Chrome New Tab</title>
+
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/extension.min.css" />
+
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/hbcnmbidfinkocndbbchppnnnmlcdocl">
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Thank you for your download</h1>
+
+        <p>
+            You should see your new Chrome tab is replaced by the extension.
+        </p>
+
+        <p style="margin-top: 30px;">
+            Chrome will confirm your change when you open a new tab,
+            <br />
+            please click Keep Change to keep the extension features.
+        </p>
+
+        <p style="margin-top: 30px;">
+            <img src="img/confirm.png" />
+        </p>
+
+    </div>
+
+
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <script>
+        $("#btn-close").click(function () {
+            event.preventDefault();
+            window.close();
+        });
+    </script>
+</body>
+</html>

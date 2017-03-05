@@ -25,5 +25,11 @@ namespace DailyBibleVerse.Server.Controllers
             return this.View(model);
         }
 
+        [Route("~/installed")]
+        public ActionResult Install()
+        {
+            return this.View();
+        }
+
     }
 }

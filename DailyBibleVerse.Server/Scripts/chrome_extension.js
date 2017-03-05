@@ -55,7 +55,7 @@ $(function () {
     $("#btn-install").click(function () {
         if (chrome && chrome.webstore) {
             chrome.webstore.install(undefined, function () {
-                window.location.href = "/installed.html";
+                window.location.href = "/installed";
             }, function () {
                 window.location.href = webstoreUrl;
             });
