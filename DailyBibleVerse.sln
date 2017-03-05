@@ -22,28 +22,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DailyBibleVerse.ChromeExten
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "55339"
 	EndProjectSection
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DailyBibleVerse.ChromeExtensionDownloadPage", "DailyBibleVerse.ChromeExtensionDownloadPage\", "{DB0670D2-36AE-4421-A675-B83875D02FFE}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_62553"
-		Debug.AspNetCompiler.PhysicalPath = "DailyBibleVerse.ChromeExtensionDownloadPage\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62553\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55339"
+		Debug.AspNetCompiler.PhysicalPath = "DailyBibleVerse.ChromeExtension\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55339\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_62553"
-		Release.AspNetCompiler.PhysicalPath = "DailyBibleVerse.ChromeExtensionDownloadPage\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62553\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55339"
+		Release.AspNetCompiler.PhysicalPath = "DailyBibleVerse.ChromeExtension\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55339\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "62553"
+		VWDPort = "55339"
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyBibleVerse.UWP", "DailyBibleVerse.UWP\DailyBibleVerse.UWP.csproj", "{3006BB1B-066B-4852-9727-5849F833A8E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyBibleVerse.Server", "DailyBibleVerse.Server\DailyBibleVerse.Server.csproj", "{1DAC0778-F309-40BA-ACC7-E0970121D64D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,15 +66,6 @@ Global
 		{214812EF-8263-47D0-A4B9-90A57A477076}.Release|ARM.ActiveCfg = Debug|Any CPU
 		{214812EF-8263-47D0-A4B9-90A57A477076}.Release|x64.ActiveCfg = Debug|Any CPU
 		{214812EF-8263-47D0-A4B9-90A57A477076}.Release|x86.ActiveCfg = Debug|Any CPU
-		{DB0670D2-36AE-4421-A675-B83875D02FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB0670D2-36AE-4421-A675-B83875D02FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB0670D2-36AE-4421-A675-B83875D02FFE}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{DB0670D2-36AE-4421-A675-B83875D02FFE}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{DB0670D2-36AE-4421-A675-B83875D02FFE}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{DB0670D2-36AE-4421-A675-B83875D02FFE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB0670D2-36AE-4421-A675-B83875D02FFE}.Release|ARM.ActiveCfg = Debug|Any CPU
-		{DB0670D2-36AE-4421-A675-B83875D02FFE}.Release|x64.ActiveCfg = Debug|Any CPU
-		{DB0670D2-36AE-4421-A675-B83875D02FFE}.Release|x86.ActiveCfg = Debug|Any CPU
 		{3006BB1B-066B-4852-9727-5849F833A8E8}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{3006BB1B-066B-4852-9727-5849F833A8E8}.Debug|ARM.ActiveCfg = Debug|ARM
 		{3006BB1B-066B-4852-9727-5849F833A8E8}.Debug|ARM.Build.0 = Debug|ARM
@@ -95,6 +86,22 @@ Global
 		{3006BB1B-066B-4852-9727-5849F833A8E8}.Release|x86.ActiveCfg = Release|x86
 		{3006BB1B-066B-4852-9727-5849F833A8E8}.Release|x86.Build.0 = Release|x86
 		{3006BB1B-066B-4852-9727-5849F833A8E8}.Release|x86.Deploy.0 = Release|x86
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Debug|ARM.Build.0 = Debug|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Debug|x64.Build.0 = Debug|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Debug|x86.Build.0 = Debug|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Release|ARM.Build.0 = Release|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Release|x64.ActiveCfg = Release|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Release|x64.Build.0 = Release|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Release|x86.ActiveCfg = Release|Any CPU
+		{1DAC0778-F309-40BA-ACC7-E0970121D64D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

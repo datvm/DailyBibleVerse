@@ -1,0 +1,105 @@
+﻿@{ 
+    this.Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="http://dailybibleverse.lukevo.faith/img/icon-512.png">
+
+    <meta property="og:image" content="http://dailybibleverse.lukevo.faith/img/preview.png" />
+
+    <title>Daily Bible Verse - Câu Kinh Thánh suy ngẫm hàng ngày trên Chrome</title>
+
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/extension.min.css" />
+
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/hbcnmbidfinkocndbbchppnnnmlcdocl">
+</head>
+<body>
+    <input id="txt-wallpaper" type="file" accept="image/*" class="hidden" />
+    <div class="page-background"></div>
+
+    <div class="download-chrome">
+        <p class="text-right">
+            <a href="@this.Url.Action("Chrome", "Home")#ncr">
+                <small>English (tiếng Anh)</small>
+            </a>
+        </p>
+
+        <h3>
+            <img class="/img-inline" src="/img/icon-64.png" />
+            Chức năng chính của <strong>Daily Bible Verse</strong>:
+        </h3>
+
+        <ul>
+            <li>Câu Kinh Thánh hàng ngày với hơn 200 phiên bản Kinh Thánh;</li>
+            <li>Tự mình chọn hình nền;</li>
+            <li>Có ngay khi mở Tab mới của Chrome, kể cả khi không có Internet.</li>
+        </ul>
+
+        <p class="text-center">
+            <img class="webstore" src="/img/chrome_webstore.png" />
+        </p>
+
+        <div class="text-center clearfix">
+            <button id="btn-install" class="btn btn-primary col-sm-12">Cài đặt ngay</button>
+        </div>
+
+        <p class="text-center">
+            <a href="https://chrome.google.com/webstore/detail/hbcnmbidfinkocndbbchppnnnmlcdocl">
+                <small>hoặc xem trên Chrome WebStore</small>
+            </a>
+
+        </p>
+
+        <hr />
+        <p>
+            <a href="https://github.com/datvm/DailyBibleVerse">
+                Mã nguồn mở tại GitHub.
+            </a>
+        </p>
+
+        <p>
+            Chức năng sắp có:
+            <ul>
+                <li>Nhiều tùy chọn hiển thị hơn;</li>
+                <li>Hình nền hàng ngày có hoặc không có kèm hình Kinh Thánh;</li>
+                <li>Thêm ngôn ngữ tùy chọn.</li>
+            </ul>
+        </p>
+
+    </div>
+
+    <div class="content">
+        <div class="middle-top">
+            <p class="clock-welcome">Good Morning</p>
+            <p class="clock">00:00</p>
+            <p class="date">Jan 01 2017</p>
+        </div>
+
+        <div class="middle-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8 col-sm-12">
+                        <div class="verse">@this.Html.Raw(this.Model.text)</div>
+                        <div class="verse-ref">
+                            <a href="@(this.Model.permalink)" class="verse-address">@this.Html.Raw(this.Model.display_ref)</a>
+                            <br />
+                            <span class="verse-version">@this.Html.Raw(this.Model.version)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/chrome_extension.js"></script>
+</body>
+</html>
