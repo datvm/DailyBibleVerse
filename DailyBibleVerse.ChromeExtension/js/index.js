@@ -18,6 +18,8 @@ function appendLeadingZero(input) {
 function showClock() {
     var now = new Date();
 
+    //now = new Date(2018, 9, 1, 14, 25, 1);
+
     // Clock
     var message = "Have a good night!";
     var hour = now.getHours();
@@ -31,11 +33,29 @@ function showClock() {
         message = "Good Evening!";
     }
 
-    var textHour = hour < 10 ? "0" + hour : hour.toString();
-    var textMinute = minute < 10 ? "0" + minute : minute.toString();
+    var halfDay = hour < 12 ? "AM" : "PM";
+
+    if (!settings || !settings.ClockFormat) {
+        settings = settings || {};
+        settings.ClockFormat = "13";
+    }
+
+    switch (settings.ClockFormat) {
+        case "1PM":
+            hour %= 12;
+            break;
+        case "1":
+            hour %= 12;
+            halfDay = "";
+            break;
+        case "13":
+        default:
+            halfDay = "";
+            break;
+    }
 
     $(".clock-welcome").html(message);
-    $(".clock").html(appendLeadingZero(hour) + ":" + appendLeadingZero(minute));
+    $(".clock").html(appendLeadingZero(hour) + ":" + appendLeadingZero(minute) + halfDay);
 
     // Date
     var day = now.getDate();
@@ -134,6 +154,7 @@ function loadSettings(callback) {
         settings.TextColor = settings.TextColor || "#FFFFFFFF";
         settings.ShadowColor = settings.ShadowColor || "#FF424242";
         settings.FontWeight = settings.FontWeight || "normal";
+        settings.ClockSettings = settings.ClockSettings || "13";
 
         chrome.storage.local.set({ settings: settings });
 
@@ -158,6 +179,7 @@ function saveSettings() {
     settings.TextColor = $("#txt-text-color").val();
     settings.ShadowColor = $("#txt-text-shadow-color").val();
     settings.FontWeight = $("input[name='opt-font-weight']:checked").val();
+    settings.ClockSettings = $("input[name='opt-clock-format']:checked").val();
 
     chrome.storage.local.set({ settings: settings });
 
@@ -211,6 +233,12 @@ function onFontWeightSelected() {
     }
 }
 
+function onClockFormatSelected() {
+    if ($(this).prop("checked")) {
+        settings.ClockFormat = $(this).val();
+    }
+}
+
 $(function () {
 
     showClock();
@@ -219,6 +247,7 @@ $(function () {
         populateBibleLanguages();
         loadVerse();
         setTextSettings();
+        $("[name='opt-clock-format'][value='" + settings.ClockFormat + "']").prop("checked", true)
 
         $("#txt-text-color").each(function () {
             $(this).spectrum({
@@ -237,9 +266,9 @@ $(function () {
                 move: onTextShadowChoose,
             });
         });
-        
+
     });
-    
+
     $("#btn-show-menu").click(function () { $("#diag-menu").removeClass("hidden"); event.preventDefault(); })
     $("#btn-close-menu").click(function () { $("#diag-menu").addClass("hidden"); event.preventDefault(); });
     $("#btn-save").click(function () { saveSettings(); $("#diag-menu").addClass("hidden"); event.preventDefault(); })
@@ -275,4 +304,5 @@ $(function () {
     $("#txt-text-shadow-color").on("change", onTextShadowChoose);
 
     $("input[name='opt-font-weight']").change(onFontWeightSelected);
+    $("input[name='opt-clock-format']").change(onClockFormatSelected);
 });
