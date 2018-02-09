@@ -17,6 +17,12 @@ namespace DailyBibleVerse.Server.Controllers
             var model = VersesOfTheDay.NIV.VotdResponse;
             return this.View(model);
         }
+
+        [Route("~/vi")]
+        public ActionResult OldChromeVietnamese()
+        {
+            return this.RedirectToActionPermanent(nameof(this.ChromeVietnamese));
+        }
         
         [Route("~/chrome/vi")]
         public ActionResult ChromeVietnamese()
